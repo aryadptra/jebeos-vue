@@ -3820,7 +3820,7 @@ vue-flatpickr-component@^9:
 
 vue-good-table-next@^0.2.1:
   version "0.2.1"
-  resolved "https://registry.npmjs.org/vue-good-table-next/-/vue-good-table-next-0.2.1.tgz"
+  resolved "https://registry.yarnpkg.com/vue-good-table-next/-/vue-good-table-next-0.2.1.tgz#af0815d0ee5b179fa1f73e4408022250cba952d1"
   integrity sha512-Zri8pQtUdb698FA+KSSOW4rxLthuJw8QUdWDdmArUPyxjVFH0wpXbK32r9RgPkHFMMPVUSsqchCqE2wE1tI0qg==
   dependencies:
     date-fns "^2.25.0"

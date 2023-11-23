@@ -13,6 +13,11 @@ export const menuItems = [
     icon: "heroicons-outline:home",
     link: "home",
   },
+  {
+    title: "Categories",
+    icon: "heroicons:list-bullet",
+    link: "categories",
+  },
 ];
 // menuseetins
 

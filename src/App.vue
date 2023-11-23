@@ -20,8 +20,8 @@ export default {
   },
   mounted() {
     const activeUser = localStorage.getItem("activeUser");
-    if (activeUser) {
-      router.push("/home");
+    if (!activeUser) {
+      router.push("/login");
     }
 
     this.$store.themeSettingsStore = useThemeSettingsStore();

@@ -41,6 +41,18 @@ const routes = [
       hide: true,
     },
   },
+  {
+    path: "/categories",
+    name: "Categories",
+    component: () => import("@/Layout/index.vue"),
+    children: [
+      {
+        path: "/categories",
+        name: "categories",
+        component: () => import("@/views/categories.vue"),
+      },
+    ],
+  },
 ];
 
 export default routes;
