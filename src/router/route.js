@@ -53,6 +53,19 @@ const routes = [
       },
     ],
   },
+
+  {
+    path: "/products",
+    name: "Products",
+    component: () => import("@/Layout/index.vue"),
+    children: [
+      {
+        path: "/products",
+        name: "Products",
+        component: () => import("@/views/products.vue"),
+      },
+    ],
+  },
 ];
 
 export default routes;

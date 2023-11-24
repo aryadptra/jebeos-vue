@@ -18,6 +18,11 @@ export const menuItems = [
     icon: "heroicons:list-bullet",
     link: "categories",
   },
+  {
+    title: "Products",
+    icon: "heroicons:square-2-stack-solid",
+    link: "products",
+  },
 ];
 // menuseetins
 
