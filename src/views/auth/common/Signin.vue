@@ -121,6 +121,7 @@ export default {
 
           // Simpan informasi pengguna aktif ke localStorage
           localStorage.setItem("activeUser", JSON.stringify(user));
+          localStorage.setItem("userName", user.name);
           localStorage.setItem("userToken", "Bearer " + token);
 
           let isUser = localStorage.users ? JSON.parse(localStorage.users) : [];

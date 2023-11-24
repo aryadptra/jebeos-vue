@@ -5,7 +5,8 @@
         this.$store.themeSettingsStore.navbarColor
       }
       ${
-        this.$store.themeSettingsStore.menuLayout === 'horizontal' && window.width > 1280
+        this.$store.themeSettingsStore.menuLayout === 'horizontal' &&
+        window.width > 1280
           ? 'py-1'
           : 'md:py-6 py-3'
       }
@@ -18,7 +19,10 @@
         >
           <button
             class="ltr:mr-5 rtl:ml-5 text-xl text-slate-900 dark:text-white"
-            v-if="this.$store.themeSettingsStore.sidebarCollasp && window.width > 1280"
+            v-if="
+              this.$store.themeSettingsStore.sidebarCollasp &&
+              window.width > 1280
+            "
             @click="this.$store.themeSettingsStore.sidebarCollasp = false"
           >
             <Icon
@@ -34,7 +38,7 @@
           <handle-mobile-menu
             v-if="window.width < 1280 && window.width > 768"
           />
-          <SearchModal />
+          <!-- <SearchModal /> -->
         </div>
         <div
           v-if="this.$store.themeSettingsStore.menuLayout === 'horizontal'"
@@ -46,17 +50,18 @@
         </div>
         <Mainnav
           v-if="
-            this.$store.themeSettingsStore.menuLayout === 'horizontal' && window.width > 1280
+            this.$store.themeSettingsStore.menuLayout === 'horizontal' &&
+            window.width > 1280
           "
         />
         <div
           class="nav-tools flex items-center lg:space-x-6 space-x-3 rtl:space-x-reverse"
         >
-          <LanguageVue />
+          <!-- <LanguageVue /> -->
           <SwitchDark />
-          <MonochromeMode />
-          <Message v-if="window.width > 768" />
-          <Notification v-if="window.width > 768" />
+          <!-- <MonochromeMode /> -->
+          <!-- <Message v-if="window.width > 768" /> -->
+          <!-- <Notification v-if="window.width > 768" /> -->
           <Profile v-if="window.width > 768" />
           <handle-mobile-menu v-if="window.width < 768" />
         </div>

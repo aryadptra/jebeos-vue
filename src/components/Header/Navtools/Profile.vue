@@ -4,7 +4,7 @@
       <div class="flex-1 ltr:mr-[10px] rtl:ml-[10px]">
         <div class="lg:h-8 lg:w-8 h-7 w-7 rounded-full">
           <img
-            :src="profileImg"
+            :src="`https://ui-avatars.com/api/?name=${userName}&amp;background=4e73df&amp;color=ffffff&amp;size=100`"
             alt=""
             class="block w-full h-full object-cover rounded-full"
           />
@@ -15,8 +15,8 @@
       >
         <span
           class="overflow-hidden text-ellipsis whitespace-nowrap w-[85px] block"
-          >Albert Flores</span
-        >
+          >{{ userName }}
+        </span>
         <span class="text-base inline-block ltr:ml-[10px] rtl:mr-[10px]"
           ><Icon icon="heroicons-outline:chevron-down"></Icon
         ></span>
@@ -59,56 +59,57 @@ export default {
   data() {
     return {
       profileImg,
+      userName: localStorage.getItem("userName"),
       ProfileMenu: [
-        {
-          label: "Profile",
-          icon: "heroicons-outline:user",
-          link: () => {
-            this.$router.push("profile");
-          },
-        },
-        {
-          label: "Chat",
-          icon: "heroicons-outline:chat",
-          link: () => {
-            this.$router.push("chat");
-          },
-        },
-        {
-          label: "Email",
-          icon: "heroicons-outline:mail",
-          link: () => {
-            this.$router.push("email");
-          },
-        },
-        {
-          label: "Todo",
-          icon: "heroicons-outline:clipboard-check",
-          link: () => {
-            this.$router.push("todo");
-          },
-        },
-        {
-          label: "Settings",
-          icon: "heroicons-outline:cog",
-          link: () => {
-            this.$router.push("settings");
-          },
-        },
-        {
-          label: "Price",
-          icon: "heroicons-outline:credit-card",
-          link: () => {
-            this.$router.push("pricing");
-          },
-        },
-        {
-          label: "Faq",
-          icon: "heroicons-outline:information-circle",
-          link: () => {
-            this.$router.push("faq");
-          },
-        },
+        // {
+        //   label: "Profile",
+        //   icon: "heroicons-outline:user",
+        //   link: () => {
+        //     this.$router.push("profile");
+        //   },
+        // },
+        // {
+        //   label: "Chat",
+        //   icon: "heroicons-outline:chat",
+        //   link: () => {
+        //     this.$router.push("chat");
+        //   },
+        // },
+        // {
+        //   label: "Email",
+        //   icon: "heroicons-outline:mail",
+        //   link: () => {
+        //     this.$router.push("email");
+        //   },
+        // },
+        // {
+        //   label: "Todo",
+        //   icon: "heroicons-outline:clipboard-check",
+        //   link: () => {
+        //     this.$router.push("todo");
+        //   },
+        // },
+        // {
+        //   label: "Settings",
+        //   icon: "heroicons-outline:cog",
+        //   link: () => {
+        //     this.$router.push("settings");
+        //   },
+        // },
+        // {
+        //   label: "Price",
+        //   icon: "heroicons-outline:credit-card",
+        //   link: () => {
+        //     this.$router.push("pricing");
+        //   },
+        // },
+        // {
+        //   label: "Faq",
+        //   icon: "heroicons-outline:information-circle",
+        //   link: () => {
+        //     this.$router.push("faq");
+        //   },
+        // },
         {
           label: "Logout",
           icon: "heroicons-outline:login",
