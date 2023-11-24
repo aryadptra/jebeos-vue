@@ -5,7 +5,6 @@
       title="Data Categories"
       subtitle="Category data will be shown here"
     >
-      <!-- Modal untuk "Edit" -->
       <Modal
         title="Edit Category"
         label="Edit Category"
@@ -74,24 +73,14 @@
             >
               {{ props.row.created_at }}
             </span>
+            <span
+              v-if="props.column.field == 'updated_at'"
+              class="text-slate-500 dark:text-slate-400"
+            >
+              {{ props.row.created_at }}
+            </span>
             <span v-if="props.column.field == 'action'">
               <div class="flex space-x-3 justify-center rtl:space-x-reverse">
-                <!-- <Tooltip placement="top" arrow theme="dark">
-                  <template #button>
-                    <div class="action-btn">
-                      <Icon icon="heroicons:eye" />
-                    </div>
-                  </template>
-                  <span> View</span>
-                </Tooltip> -->
-                <!-- <Tooltip placement="top" arrow theme="dark">
-                  <template #button>
-                    <div class="action-btn">
-                      <Icon icon="heroicons:pencil-square" />
-                    </div>
-                  </template>
-                  <span> Edit</span>
-                </Tooltip> -->
                 <Tooltip placement="top" arrow theme="dark">
                   <template #button>
                     <div
@@ -277,6 +266,10 @@ export default {
           field: "created_at",
         },
         {
+          label: "Updated On",
+          field: "updated_at",
+        },
+        {
           label: "Action",
           field: "action",
         },
@@ -310,20 +303,6 @@ export default {
         toast.error(error, { timeout: 2000 });
       }
     };
-
-    // const deleteCategory = async (categoryId) => {
-    //   try {
-    //     // Menggunakan axios untuk menghapus kategori
-    //     await axiosClient.delete(`categories/${categoryId}`);
-    //     toast.success("Category deleted successfully", { timeout: 2000 });
-
-    //     // Refresh data setelah menghapus kategori
-    //     refreshData();
-    //   } catch (error) {
-    //     toast.error("Error deleting category", { timeout: 2000 });
-    //     console.error(error);
-    //   }
-    // };
 
     onMounted(() => {
       refreshData();
