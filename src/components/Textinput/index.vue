@@ -118,7 +118,7 @@ export default {
       default: "classinput",
     },
     type: {
-      type: String,
+      // type: String,
       default: "text",
       //required: true,
     },
